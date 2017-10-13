@@ -32,20 +32,20 @@ $ git clone git@github.com:<repository-name>.git <project-name>
 
 Change working directory to cloned one and run following commands.
 
-> Destination files will be outputted to the `public/` directory and will contain all necessary files.
+> Destination files will be outputted to the `public/` directory and it will contain all necessary files.
 
 ```bash
 # Change directory to the cloned folder.
 $ cd <project-name>
 
 # Install required npm dependences for building a theme.
-npm install
+$ npm install
 
 # Build project for development.
-npm run dev
+$ npm run dev
 
 # Build project for production (minify CSS, JavaScript, and images).
-npm run prod
+$ npm run prod
 ```
 
 ## Development
@@ -54,7 +54,7 @@ To make development fast and pleasant builder can watch your files and automatic
 
 ```bash
 # Compile project files and rebuild after changes.
-npm run watch
+$ npm run watch
 ```
 
 ## Important things
