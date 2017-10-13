@@ -1,0 +1,17 @@
+{% extends 'layouts/layout.html' %}
+
+{% block title %}
+  Home
+{% endblock %}
+
+{% block content %}
+  <h1>HTML Front-end Boilerplate</h1>
+
+  <ul>
+    {% for item in links.items %}
+      <li>
+        <a href="{{ item.link }}">{{ item.title }}</a>
+      </li>
+    {% endfor %}
+  </ul>
+{% endblock %}
