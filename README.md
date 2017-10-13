@@ -1,5 +1,7 @@
 # <project-name> — HTML Front-end Boilerplate
 
+A modern front-end boilerplate for building fast, organized and standarized web apps or sites.
+
 ## Requirements
 
 Make sure you have all these dependencies installed before moving on:
