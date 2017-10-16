@@ -10,7 +10,8 @@
     "watch": "npm run development && cross-env NODE_ENV=development gulp watch --gulpfile='build/build.js'",
     "images:production": "cross-env NODE_ENV=production gulp image --gulpfile='build/build.js'",
     "sass:lint": "cross-env NODE_ENV=production gulp sass:lint --gulpfile='build/build.js'",
-    "javascript:lint": "cross-env NODE_ENV=production gulp javascript:lint --gulpfile='build/build.js'"
+    "javascript:lint": "cross-env NODE_ENV=production gulp javascript:lint --gulpfile='build/build.js'",
+    "precommit": "npm run sass:lint && npm run javascript:lint"
   },
   "dependencies": {},
   "devDependencies": {
@@ -40,8 +41,8 @@
     "gulp-sass": "^3.1.0",
     "gulp-stylelint": "^5.0.0",
     "gulp-uglify": "^3.0.0",
+    "husky": "^0.14.3",
     "isdev": "^1.0.1",
-    "pre-commit": "^1.2.2",
     "rollup-plugin-babel": "^3.0.2",
     "rollup-plugin-commonjs": "^8.2.1",
     "rollup-plugin-node-resolve": "^3.0.0",
@@ -51,9 +52,5 @@
     "stylelint-scss": "^2.1.0",
     "vinyl-buffer": "^1.0.0",
     "vinyl-source-stream": "^1.1.0"
-  },
-  "pre-commit": [
-    "sass:lint",
-    "javascript:lint"
-  ]
+  }
 }

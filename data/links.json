@@ -1,6 +1,6 @@
 {
   "items": [
-    { "title": "Tonik", "link": "//tonik.pl" }
-    { "title": "Github", "link": "//github.com/tonik/html-frontend-boilerplate" },
+    { "title": "Tonik", "link": "//tonik.pl" },
+    { "title": "Github", "link": "//github.com/tonik/html-frontend-boilerplate" }
   ]
 }
