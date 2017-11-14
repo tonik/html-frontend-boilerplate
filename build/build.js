@@ -33,7 +33,6 @@ gulp.task('javascript', ['javascript:clean', 'javascript:lint', 'javascript:buil
 
 gulp.task('sync', () => {
   browsersync.init({
-    reloadDelay: 50,
     open: false,
     server: { baseDir: '../public' }
   })
