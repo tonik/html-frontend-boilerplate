@@ -8,7 +8,6 @@ const cleancss = require('gulp-clean-css')
 const prefix = require('gulp-autoprefixer')
 
 const message = require('../../lib/message')
-const browsersync = require('../../lib/browsersync')
 
 module.exports = () => {
   return gulp.src('../resources/assets/sass/app.scss')
@@ -20,5 +19,4 @@ module.exports = () => {
     }))
     .pipe(gulpif(!isdev, cleancss()))
     .pipe(gulp.dest('../public/css'))
-    .pipe(browsersync.stream())
 }

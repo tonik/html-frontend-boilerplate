@@ -1,7 +1,8 @@
 const gulp = require('gulp')
 const notify = require('gulp-notify')
 
-const browsersync = require('./lib/browsersync')
+const browsersync = require('browser-sync').create()
+const reload = browsersync.reload
 
 if (! process.env.NODE_ENV) {
   throw new Error('Please setup environment variable [NODE_ENV] before building.')
@@ -39,31 +40,31 @@ gulp.task('sync', () => {
 })
 
 gulp.task('watch', ['sync'], () => {
-  gulp.watch('../resources/assets/sass/**/*.scss', ['sass'])
+  gulp.watch('../resources/assets/sass/**/*.scss', ['sass', reload])
     .on('error', notify.onError({
       title: 'WATCH: Sass',
       message: '\n<%= error.message %>'
     }))
 
-  gulp.watch('../resources/assets/js/**/*.js', ['javascript'])
+  gulp.watch('../resources/assets/js/**/*.js', ['javascript', reload])
     .on('error', notify.onError({
       title: 'WATCH: Javascript',
       message: '\n<%= error.message %>'
     }))
 
-  gulp.watch('../resources/assets/fonts/**/*.ttf', ['font'])
+  gulp.watch('../resources/assets/fonts/**/*.ttf', ['font', reload])
     .on('error', notify.onError({
       title: 'WATCH: Fonts',
       message: '\n<%= error.message %>'
     }))
 
-  gulp.watch('../resources/assets/images/**/*.{jpg,jpeg,png,gif,svg}', ['image'])
+  gulp.watch('../resources/assets/images/**/*.{jpg,jpeg,png,gif,svg}', ['image', reload])
     .on('error', notify.onError({
       title: 'WATCH: Images',
       message: '\n<%= error.message %>'
     }))
 
-  gulp.watch('../resources/views/**/*.html', ['html'])
+  gulp.watch('../resources/views/**/*.html', ['html', reload])
     .on('error', notify.onError({
       title: 'WATCH: Views',
       message: '\n<%= error.message %>'

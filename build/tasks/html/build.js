@@ -4,7 +4,6 @@ const nunjucks = require('gulp-nunjucks-render')
 
 const json = require('../../lib/json')
 const message = require('../../lib/message')
-const browsersync = require('../../lib/browsersync')
 
 module.exports = () => {
   return gulp.src('../resources/views/*.html')
@@ -14,5 +13,4 @@ module.exports = () => {
     }))
     .on('error', message.error('NUNJUCKS: Compilation'))
     .pipe(gulp.dest('../public'))
-    .pipe(browsersync.stream())
 }

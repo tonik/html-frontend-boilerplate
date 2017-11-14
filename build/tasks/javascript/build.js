@@ -12,7 +12,6 @@ const resolve = require('rollup-plugin-node-resolve')
 const commonjs = require('rollup-plugin-commonjs')
 
 const message = require('../../lib/message')
-const browsersync = require('../../lib/browsersync')
 
 module.exports = () => {
   return rollup({
@@ -30,5 +29,4 @@ module.exports = () => {
     .pipe(gulpif(!isdev, uglify()))
     .on('error', message.error('JAVASCRIPT: Minification'))
     .pipe(gulp.dest('../public/js'))
-    .pipe(browsersync.stream())
 }
