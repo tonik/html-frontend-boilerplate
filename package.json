@@ -1,5 +1,6 @@
 {
   "private": true,
+  "description": "A modern front-end boilerplate for building fast, organized and standarized web apps or sites.",
   "author": "Tonik <hello@tonik.pl> (http://tonik.pl)",
   "version": "1.0.0",
   "scripts": {
@@ -32,7 +33,6 @@
     "gulp-clean-css": "^3.9.0",
     "gulp-data": "^1.2.1",
     "gulp-eslint": "^4.0.0",
-    "gulp-fontmin": "^0.7.4",
     "gulp-if": "^2.0.2",
     "gulp-imagemin": "^3.3.0",
     "gulp-merge-json": "^1.2.0",
