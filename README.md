@@ -2,7 +2,7 @@
 
 # <project-name> — HTML Front-end Boilerplate
 
-A modern front-end boilerplate for building fast, organized and standarized web apps or sites.
+A modern front-end boilerplate for building fast, organized and standardized web apps or sites.
 
 ## Requirements
 
