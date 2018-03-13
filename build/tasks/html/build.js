@@ -6,10 +6,10 @@ const json = require('../../lib/json')
 const message = require('../../lib/message')
 
 module.exports = () => {
-  return gulp.src('../resources/views/*.html')
+  return gulp.src('../src/*.html')
     .pipe(data(json()))
     .pipe(nunjucks({
-      path: ['../resources/views']
+      path: ['../src']
     }))
     .on('error', message.error('NUNJUCKS: Compilation'))
     .pipe(gulp.dest('../public'))
