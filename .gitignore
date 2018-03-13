@@ -4,7 +4,6 @@
 # Project folders
 node_modules/
 public/
-design/
 
 # Log files
 npm-debug.log
