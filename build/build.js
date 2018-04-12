@@ -108,7 +108,7 @@ gulp.task('watch', ['sync'], () => {
   gulp.watch('../resources/assets/images/**/*.{jpg,jpeg,png,gif,svg}', ['image', reload])
     .on('error', message.error('WATCH: Images'))
 
-  gulp.watch('../resources/views/**/*.html', ['html', reload])
+  gulp.watch('../src/**/*.html', ['html', reload])
     .on('error', message.error('WATCH: Views'))
 })
 
