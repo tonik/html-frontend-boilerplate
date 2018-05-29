@@ -7,7 +7,7 @@ const message = require('../../lib/message')
 
 module.exports = () => {
   return gulp.src('../src/*.html')
-    .pipe(data(json()))
+    .pipe(data(json('../resources/json/')))
     .pipe(nunjucks({
       path: ['../src']
     }))
