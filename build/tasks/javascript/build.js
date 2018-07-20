@@ -15,16 +15,16 @@ const message = require('../../lib/message')
 
 module.exports = () => {
   return rollup({
-      format: 'iife',
-      input: '../resources/assets/js/main.js',
-      plugins: [
-        resolve(),
-        commonjs(),
-        babel()
-      ]
-    })
+    format: 'iife',
+    input: '../resources/assets/js/app.js',
+    plugins: [
+      resolve(),
+      commonjs(),
+      babel()
+    ]
+  })
     .on('error', message.error('JAVASCRIPT: Bundling'))
-    .pipe(source('main.js'))
+    .pipe(source('app.js'))
     .pipe(buffer())
     .pipe(gulpif(!isdev, uglify()))
     .on('error', message.error('JAVASCRIPT: Minification'))
