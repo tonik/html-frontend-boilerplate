@@ -47,7 +47,7 @@
     "rollup-plugin-node-resolve": "^3.0.0",
     "rollup-stream": "^1.24.1",
     "@tonik/eslint-config": "^1.1.1",
-    "@tonik/stylelint-config": "^2.1.0",
+    "@tonik/stylelint-config-scss": "^2.0.0",
     "stylelint": "^8.2.0",
     "stylelint-config-standard": "^17.0.0",
     "stylelint-scss": "^2.1.0",
