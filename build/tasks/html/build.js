@@ -12,5 +12,12 @@ module.exports = () => {
       path: ['../src']
     }))
     .on('error', message.error('NUNJUCKS: Compilation'))
+    .on('error', function (err) {
+      if (err) {
+        console.error('error', err.message)
+
+        process.exit(1)
+      }
+    })
     .pipe(gulp.dest('../public'))
 }
