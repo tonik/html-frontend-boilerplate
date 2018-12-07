@@ -96,19 +96,19 @@ gulp.task('sync', () => {
 |
 */
 gulp.task('watch', ['sync'], () => {
-  gulp.watch('../resources/assets/sass/**/*.scss', ['sass', reload])
+  gulp.watch('resources/assets/sass/**/*.scss', { cwd: '../' }, ['sass', reload])
     .on('error', message.error('WATCH: Sass'))
 
-  gulp.watch('../resources/assets/js/**/*.js', ['javascript', reload])
+  gulp.watch('resources/assets/js/**/*.js', { cwd: '../' }, ['javascript', reload])
     .on('error', message.error('WATCH: Javascript'))
 
-  gulp.watch('../resources/assets/fonts/**/*.{eot,woff,woff2,ttf,svg}', ['font', reload])
+  gulp.watch('resources/assets/fonts/**/*.{eot,woff,woff2,ttf,svg}', { cwd: '../' }, ['font', reload])
     .on('error', message.error('WATCH: Fonts'))
 
-  gulp.watch('../resources/assets/images/**/*.{jpg,jpeg,png,gif,svg}', ['image', reload])
+  gulp.watch('resources/assets/images/**/*.{jpg,jpeg,png,gif,svg}', { cwd: '../' }, ['image', reload])
     .on('error', message.error('WATCH: Images'))
 
-  gulp.watch('../src/**/*.html', ['html', reload])
+  gulp.watch('src/**/*.html', { cwd: '../' }, ['html', reload])
     .on('error', message.error('WATCH: Views'))
 })
 
