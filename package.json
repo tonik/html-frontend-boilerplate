@@ -44,6 +44,7 @@
     "gulp-stylelint": "^5.0.0",
     "gulp-uglify": "^3.0.0",
     "imagemin-mozjpeg": "^8.0.0",
+    "imagemin-pngquant": "^7.0.0",
     "isdev": "^1.0.1",
     "rollup-plugin-babel": "^3.0.2",
     "rollup-plugin-commonjs": "^8.2.1",
