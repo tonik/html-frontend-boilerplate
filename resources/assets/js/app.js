@@ -1,2 +1,1 @@
 //
-Object.assign({test: 'test'}, {})
