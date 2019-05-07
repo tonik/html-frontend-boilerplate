@@ -1,1 +1,2 @@
 //
+Object.assign({test: 'test'}, {})
