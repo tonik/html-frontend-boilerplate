@@ -10,7 +10,6 @@ const source = require('vinyl-source-stream')
 const babel = require('rollup-plugin-babel')
 const resolve = require('rollup-plugin-node-resolve')
 const commonjs = require('rollup-plugin-commonjs')
-const json = require('rollup-plugin-json')
 
 const message = require('../../lib/message')
 
@@ -19,12 +18,7 @@ module.exports = () => {
     format: 'iife',
     input: '../resources/assets/js/app.js',
     plugins: [
-      resolve({
-        jsnext: true,
-        preferBuiltins: true,
-        browser: true
-      }),
-      json(),
+      resolve(),
       commonjs(),
       babel()
     ]
