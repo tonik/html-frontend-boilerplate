@@ -46,6 +46,13 @@ gulp.task('image:build', require('./tasks/image/build'))
 
 /*
 |--------------------------------------------------------------------------
+| Svg Tasks
+|--------------------------------------------------------------------------
+*/
+gulp.task('svg:build', require('./tasks/svg/build'))
+
+/*
+|--------------------------------------------------------------------------
 | JavaScript Tasks
 |--------------------------------------------------------------------------
 */
@@ -65,6 +72,7 @@ gulp.task('javascript:build', ['javascript:clean'], require('./tasks/javascript/
 gulp.task('html', ['html:clean', 'html:build'])
 gulp.task('font', ['font:clean', 'font:build'])
 gulp.task('image', ['image:clean', 'image:build'])
+gulp.task('svg', ['svg:build'])
 gulp.task('sass', ['sass:clean', 'sass:lint', 'sass:build'])
 gulp.task('javascript', ['javascript:clean', 'javascript:lint', 'javascript:build'])
 
@@ -108,6 +116,9 @@ gulp.task('watch', ['sync'], () => {
   gulp.watch('resources/assets/images/**/*.{jpg,jpeg,png,gif,svg}', { cwd: '../' }, ['image', reload])
     .on('error', message.error('WATCH: Images'))
 
+  gulp.watch('src/icons/**/*.svg', { cwd: '../' }, ['svg', reload])
+    .on('error', message.error('WATCH: SVG'))
+
   gulp.watch('src/**/*.html', { cwd: '../' }, ['html', reload])
     .on('error', message.error('WATCH: Views'))
 })
@@ -122,4 +133,4 @@ gulp.task('watch', ['sync'], () => {
 | tasks and completely building the whole project.
 |
 */
-gulp.task('default', ['sass', 'javascript', 'font', 'image', 'html'])
+gulp.task('default', ['sass', 'javascript', 'font', 'image', 'svg', 'html'])
