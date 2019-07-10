@@ -4,7 +4,7 @@ const svgmin = require('gulp-svgmin')
 const message = require('../../lib/message')
 
 module.exports = () => {
-  return gulp.src('../src/icons/**/*.svg')
+  return gulp.src('../src/svg/**/*.svg')
     .pipe(svgmin({
       plugins: [{
         removeViewBox: false
@@ -20,5 +20,5 @@ module.exports = () => {
       }
     }))
     .on('error', message.error('SVG: Optimization'))
-    .pipe(gulp.dest('../src/icons'))
+    .pipe(gulp.dest('../src/svg'))
 }
