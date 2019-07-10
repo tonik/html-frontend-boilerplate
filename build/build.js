@@ -116,7 +116,7 @@ gulp.task('watch', ['sync'], () => {
   gulp.watch('resources/assets/images/**/*.{jpg,jpeg,png,gif,svg}', { cwd: '../' }, ['image', reload])
     .on('error', message.error('WATCH: Images'))
 
-  gulp.watch('src/icons/**/*.svg', { cwd: '../' }, ['svg', reload])
+  gulp.watch('src/svg/**/*.svg', { cwd: '../' }, ['svg', reload])
     .on('error', message.error('WATCH: SVG'))
 
   gulp.watch(['src/**/*.html', 'resources/json/**/*.json'], { cwd: '../' }, ['html', reload])
