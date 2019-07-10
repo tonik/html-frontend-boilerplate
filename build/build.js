@@ -119,7 +119,7 @@ gulp.task('watch', ['sync'], () => {
   gulp.watch('src/icons/**/*.svg', { cwd: '../' }, ['svg', reload])
     .on('error', message.error('WATCH: SVG'))
 
-  gulp.watch('src/**/*.html', { cwd: '../' }, ['html', reload])
+  gulp.watch(['src/**/*.html', 'resources/json/**/*.json'], { cwd: '../' }, ['html', reload])
     .on('error', message.error('WATCH: Views'))
 })
 
