@@ -9,6 +9,8 @@ module.exports = (dir) => {
     let files = fs.readdirSync(dirpath)
 
     files.forEach((file) => {
+      let filename = path.resolve(`${dirpath}/${file}`)
+      delete require.cache[filename]
       dataset[path.basename(file, '.json')] = require(`${dirpath}/${file}`)
     })
   }
