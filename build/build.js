@@ -18,6 +18,7 @@ if (!process.env.NODE_ENV) {
 */
 gulp.task('sass:clean', require('./tasks/sass/clean'))
 gulp.task('sass:lint', require('./tasks/sass/lint'))
+gulp.task('sass:fix', require('./tasks/sass/fix'))
 gulp.task('sass:build', require('./tasks/sass/build'))
 
 /*

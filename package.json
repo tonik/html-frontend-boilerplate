@@ -2,7 +2,7 @@
   "private": true,
   "description": "A modern front-end boilerplate for building fast, organized and standardized web apps or sites.",
   "author": "Tonik <hello@tonik.pl> (http://tonik.pl)",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "scripts": {
     "dev": "npm run development",
     "development": "cross-env NODE_ENV=development gulp --gulpfile=build/build.js",
@@ -11,13 +11,14 @@
     "watch": "npm run development && cross-env NODE_ENV=development gulp watch --gulpfile=build/build.js",
     "images:production": "cross-env NODE_ENV=production gulp image --gulpfile=build/build.js",
     "sass:lint": "cross-env NODE_ENV=production gulp sass:lint --gulpfile=build/build.js",
+    "sass:fix": "cross-env NODE_ENV=production gulp sass:fix --gulpfile=build/build.js",
     "javascript:lint": "cross-env NODE_ENV=production gulp javascript:lint --gulpfile=build/build.js",
     "lint": "npm run sass:lint && npm run javascript:lint"
   },
   "dependencies": {},
   "devDependencies": {
     "@tonik/eslint-config": "^1.1.1",
-    "@tonik/stylelint-config-scss": "^2.0.0",
+    "@tonik/stylelint-config-scss": "^3.0.0",
     "babel-core": "^6.26.0",
     "babel-plugin-external-helpers": "^6.22.0",
     "babel-plugin-transform-object-assign": "^6.22.0",
@@ -42,7 +43,7 @@
     "gulp-notify": "^3.0.0",
     "gulp-nunjucks-render": "^2.2.1",
     "gulp-sass": "^3.1.0",
-    "gulp-stylelint": "^5.0.0",
+    "gulp-stylelint": "^9.0.0",
     "gulp-uglify": "^3.0.0",
     "gulp-svgmin": "^2.2.0",
     "imagemin-mozjpeg": "^8.0.0",
@@ -53,9 +54,7 @@
     "rollup-plugin-node-resolve": "^3.0.0",
     "rollup-plugin-json": "2.3",
     "rollup-stream": "^1.24.1",
-    "stylelint": "^8.2.0",
-    "stylelint-config-standard": "^17.0.0",
-    "stylelint-scss": "^2.1.0",
+    "stylelint": "^10.1.0",
     "vinyl-buffer": "^1.0.0",
     "vinyl-source-stream": "^1.1.0"
   }
