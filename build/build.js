@@ -59,6 +59,7 @@ gulp.task('svg:build', require('./tasks/svg/build'))
 */
 gulp.task('javascript:clean', require('./tasks/javascript/clean'))
 gulp.task('javascript:lint', require('./tasks/javascript/lint'))
+gulp.task('javascript:fix', require('./tasks/javascript/fix'))
 gulp.task('javascript:build', ['javascript:clean'], require('./tasks/javascript/build'))
 
 /*
