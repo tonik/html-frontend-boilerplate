@@ -1,6 +1,6 @@
 > This is a template file with instructions about usage of this project. You should fill it accordingly and distribute along with project files.
 
-# <project-name> — HTML Front-end Boilerplate
+# Project — HTML Front-end Boilerplate
 
 A modern front-end boilerplate for building fast, organized and standardized web apps or sites.
 
