@@ -9,7 +9,6 @@ module.exports = () => {
       fix: true,
       reporters: [{ formatter: 'string', console: true }]
     }))
-
     .on('error', message.error('SASS: Fixing'))
     .pipe(gulp.dest('../resources/assets/sass'))
 }
