@@ -59,6 +59,19 @@ To make development fast and pleasant builder can watch your files and automatic
 $ npm run watch
 ```
 
+There are also a few tasks to verify and autoformat source code according to configuration files.
+
+```bash
+# Verify the correctness of formatting of SASS and JavaScript.
+$ npm run lint
+
+# Run autoformatting of SASS files.
+$ npm run sass:fix
+
+# Run autoformatting of JavaScript files.
+$ npm run javascript:fix
+```
+
 ## Important things
 
 - The `public/` directory is read-only. Please, do not change anything in here, because it will be overwritten by the builder.
