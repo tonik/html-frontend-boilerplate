@@ -72,6 +72,6 @@ $ npm run sass:fix
 $ npm run javascript:fix
 ```
 
-## Important things
+## Workflow around the builder
 
-- The `public/` directory is read-only. Please, do not change anything in here, because it will be overwritten by the builder.
+- Don't change anything in the `public` directory, because it will be overwritten by the builder. This folder is read-only.
